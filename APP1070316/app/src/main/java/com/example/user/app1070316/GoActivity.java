@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 
 public class GoActivity extends AppCompatActivity {
@@ -39,6 +40,19 @@ public class GoActivity extends AppCompatActivity {
                 img.setImageResource(R.drawable.b93);
                 break;
         }
+    }
 
+    public void fn_like(View view) {
+        Intent i = new Intent();
+        i.putExtra("Like",1);
+        setResult(RESULT_OK,i);
+        finish();
+    }
+
+    public void fn_dislike(View view) {
+        Intent i = new Intent();
+        i.putExtra("Like",0);
+        setResult(RESULT_OK,i);
+        finish();
     }
 }

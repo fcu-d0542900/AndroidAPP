@@ -38,6 +38,20 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent,111);
     }
 
-
+    @Override
+    protected void onActivityResult(int requestCode,int resultCode,Intent data) {
+        if(data==null)
+            return;
+        super.onActivityResult(requestCode,resultCode,data);
+        switch (requestCode) {
+            case 111:
+                int like = data.getIntExtra("Like",1);
+                if(like==1)
+                    tv_hello.setText("Great!");
+                else
+                    tv_hello.setText("No mind.");
+                break;
+        }
+    }
 
 }
