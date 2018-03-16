@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">YURU 会社</string>
+    <string name="btn_hi">こんにちは!</string>
+    <string name="text_hello">こんにちは, </string>
+</resources>

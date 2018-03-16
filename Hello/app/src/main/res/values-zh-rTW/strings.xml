@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">YURU 公司</string>
+    <string name="btn_hi">嗨!</string>
+    <string name="text_hello">哈囉, </string>
+</resources>
