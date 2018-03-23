@@ -62,18 +62,17 @@ public class MainActivity extends ListActivity {
                 new String[]{"food","place"},
                 new int[]{android.R.id.text1,android.R.id.text2});
 
+//        getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+
         /*ArrayAdapter adapter = new ArrayAdapter<>(this,
                android.R.layout.simple_list_item_1,
                 R.layout.list_item,
                 R.id.tv_item,
                 data);*/
 
-
         setListAdapter(adapter);
 
     }
-
-
 
     protected void onListItemClick(ListView l,View v,int position,long id) {
         super.onListItemClick(l,v,position,id);
