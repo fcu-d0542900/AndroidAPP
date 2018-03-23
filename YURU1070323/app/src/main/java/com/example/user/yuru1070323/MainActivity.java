@@ -1,6 +1,7 @@
 package com.example.user.yuru1070323;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,19 +19,19 @@ public class MainActivity extends ListActivity {
     private SimpleAdapter adapter;
 
     private  static  final String[] mPlace = new String[] {
-            "台中市", "新北市", "台南市", "高雄市", "苗粟縣",
-            "台北市", "新北市", "台南市", "高雄市", "苗粟縣",
-            "台北市", "新北市", "台南市", "高雄市", "苗粟縣",
-            "台北市", "新北市", "台南市", "高雄市", "苗粟縣",
-            "台北市", "新北市", "台南市", "高雄市", "苗粟縣"
+            "台北", "淡水", "新竹", "新竹", "新埔",
+            "台中", "台中", "南投", "鹿港", "彰化",
+            "嘉義", "麻豆", "台南", "台南", "高雄",
+            "萬巒", "宜蘭", "新竹", "大湖", "台中",
+            "南投", "台南安平", "高雄美濃", "花蓮", "澎湖"
     };
 
     private static final String[] mFoods = new String[] {
-            "大餅包小餅", "蚵仔煎", "東山鴨頭", "臭豆腐", "潤餅",
-            "豆花", "青蛙下蛋","豬血糕", "大腸包小腸", "鹹水雞",
-            "烤香腸","車輪餅","珍珠奶茶","鹹酥雞","大熱狗",
-            "炸雞排","山豬肉","花生冰","剉冰","水果冰",
-            "包心粉圓","排骨酥","沙茶魷魚","章魚燒","度小月"
+            "刈包", "阿給", "貢丸", "米粉", "柿餅",
+            "大麵焿", "蔴芛湯","意麵", "麵線糊", "肉圓",
+            "火雞肉飯","碗粿","棺材板","擔仔麵","黑輪",
+            "豬腳","牛舌餅","貢丸","草莓","太陽餅",
+            "日月潭紅茶","蝦餅","粄條","剝皮辣椒","黑糖糕"
     };
 
 //    String[] data = {"台北","台中","高雄"};
@@ -50,15 +51,15 @@ public class MainActivity extends ListActivity {
         adapter = new SimpleAdapter(
                 this,
                 list,
-                android.R.layout.simple_list_item_multiple_choice,
+                android.R.layout.simple_list_item_2,
                 new String[]{"food","place"},
                 new int[]{android.R.id.text1,android.R.id.text2});
 
-//        ArrayAdapter adapter = new ArrayAdapter<>(this,
-//               android.R.layout.simple_list_item_1,
-//                R.layout.list_item,
-//                R.id.tv_item,
-//                data);
+        /*ArrayAdapter adapter = new ArrayAdapter<>(this,
+               android.R.layout.simple_list_item_1,
+                R.layout.list_item,
+                R.id.tv_item,
+                data);*/
 
 
         setListAdapter(adapter);
@@ -66,11 +67,15 @@ public class MainActivity extends ListActivity {
 
     }
 
-    protected void onListItemClick(ListView l,View v,int postition,long id) {
-        super.onListItemClick(l,v,postition,id);
+    protected void onListItemClick(ListView l,View v,int position,long id) {
+        super.onListItemClick(l,v,position,id);
 
-        String msg = "我喜歡在"+mPlace[postition]+"的"+mFoods[postition];
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(MainActivity.this,NextActivity.class);
+        intent.putExtra("n",position);
+        startActivityForResult(intent,111);
+
+        /*String msg = "我喜歡"+mPlace[position]+"的"+mFoods[position];
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();*/
     }
 
 }
