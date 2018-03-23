@@ -21,6 +21,7 @@ public class NextActivity extends AppCompatActivity {
         int position = intent.getIntExtra("n",1);
         Log.i("show position",Integer.toString(position));
 
+//利用照片名稱，讀取圖片編號
         String imgS = "f"+(position+1);
         int imgRid = 0;
         try {
