@@ -34,6 +34,13 @@ public class MainActivity extends ListActivity {
             "日月潭紅茶","蝦餅","粄條","三星蔥","黑糖糕"
     };
 
+    public static String getPlace(int position) {
+        return mPlace[position];
+    }
+    public static String getFood(int position) {
+        return mFoods[position];
+    }
+
 //    String[] data = {"台北","台中","高雄"};
 
     @Override

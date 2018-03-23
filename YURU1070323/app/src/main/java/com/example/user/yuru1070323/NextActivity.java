@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 
 import java.lang.reflect.Field;
 
@@ -16,6 +18,7 @@ public class NextActivity extends AppCompatActivity {
         setContentView(R.layout.activity_next);
 
         ImageView img = findViewById(R.id.imgFood);
+        TextView text = findViewById(R.id.textFood);
 
         Intent intent = getIntent();
         int position = intent.getIntExtra("n",1);
@@ -30,7 +33,11 @@ public class NextActivity extends AppCompatActivity {
             Log.e("Exception", "" + ex.getMessage());
         }
         img.setImageResource(imgRid);
-    }
 
+        String m = (MainActivity.getPlace(position))+"  "+MainActivity.getFood(position);
+        text.setText(m);
+
+
+    }
 
 }
