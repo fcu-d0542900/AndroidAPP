@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/YURU1070323.iml" filepath="$PROJECT_DIR$/YURU1070323.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\YURU\Documents\YURU\FCU\課\1062\行動應用程式開發(資訊跨域學程資訊二)[2199]\AndroidAPP\YURU1070323\YURU1070323.iml" filepath="D:\YURU\Documents\YURU\FCU\課\1062\行動應用程式開發(資訊跨域學程資訊二)[2199]\AndroidAPP\YURU1070323\YURU1070323.iml" />
+      <module fileurl="file://D:\YURU\Documents\YURU\FCU\課\1062\行動應用程式開發(資訊跨域學程資訊二)[2199]\AndroidAPP\YURU1070323\app\app.iml" filepath="D:\YURU\Documents\YURU\FCU\課\1062\行動應用程式開發(資訊跨域學程資訊二)[2199]\AndroidAPP\YURU1070323\app\app.iml" />
     </modules>
   </component>
 </project>
